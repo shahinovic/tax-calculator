@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>Tax Calculator</title>
+  </head>
+  <body>
+    <main>
+      <form class="form p-5 w-50 mx-auto">
+        <fieldset class="pt-5 form__fieldset">
+          <div class="mb-3">
+            <label
+              for="disabledTextInput"
+              class="form-label form__fieldset--label"
+              >Enter gross annual income
+              <button
+                type="button"
+                class="btn ms-2 form__fieldset--label__tooltip"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="Gross annual <br/>
+                income is your total <br/>
+                salary in a year <br/>
+                before any <br/>
+                 deductions"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/question.png" alt="" />
+              </button>
+            </label>
+            <div class="d-flex position-relative">
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control form__fieldset--input form__fieldset--annual-income"
+                placeholder="Enter gross annual income"
+              />
+              <button
+                type="button"
+                class="btn ms-2 hidden form__fieldset--label__tooltip form__fieldset--label__tooltip--alert"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/alert.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label"
+              >Enter extra income
+              <button
+                type="button"
+                class="btn ms-2 form__fieldset--label__tooltip"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="Extra income is additional money earned beyond one's primary source of income."
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/question.png" alt="" />
+              </button>
+            </label>
+            <div class="d-flex position-relative">
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control form__fieldset--input form__fieldset--extra-income"
+                placeholder="Enter extra income from other sources"
+              />
+
+              <button
+                type="button"
+                class="btn ms-2 hidden form__fieldset--label__tooltip form__fieldset--label__tooltip--alert"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/alert.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="disabledSelect" class="form-label"
+              >Enter age group
+              <button
+                type="button"
+                class="btn ms-2 form__fieldset--label__tooltip"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="Age group refers to a categorized range of ages"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/question.png" alt="" />
+              </button>
+            </label>
+            <div class="d-flex position-relative">
+              <select
+                id="disabledSelect"
+                class="form-select form__fieldset--input form__fieldset--age-group"
+              >
+                <option selected value=""></option>
+                <option value="<40">Age &lt; 40</option>
+                <option value=" ≥ 40 & < 60">40 &#x2264; Age &lt; 60</option>
+                <option value="≥ 60">Age &#8805; 60</option>
+              </select>
+
+              <button
+                type="button"
+                class="btn ms-2 hidden form__fieldset--label__tooltip form__fieldset--label__tooltip--alert"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/alert.png" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label for="disabledTextInput" class="form-label"
+              >Enter total applicable deduction
+              <button
+                type="button"
+                class="btn ms-2 form__fieldset--label__tooltip"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="Total applicable deduction is the sum of all eligible deductions that can be subtracted from the gross income to calculate taxable income."
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/question.png" alt="" />
+              </button>
+            </label>
+            <div class="d-flex position-relative">
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control form__fieldset--input form__fieldset--deduction"
+                placeholder="Add total applicable deduction"
+              />
+
+              <button
+                type="button"
+                class="btn ms-2 hidden form__fieldset--label__tooltip form__fieldset--label__tooltip--alert"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <img src="images/alert.png" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn w-100 form__fieldset--btn">
+            Submit
+          </button>
+        </fieldset>
+      </form>
+
+      <!-- Modal trigger button -->
+      <button
+        id="modalBtn"
+        style="display: none"
+        type="button"
+        class="btn btn-primary btn-lg"
+        data-bs-toggle="modal"
+        data-bs-target="#modalId"
+      >
+        Launch
+      </button>
+
+      <!-- Modal Body -->
+      <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+      <div
+        class="modal fade"
+        id="modalId"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl"
+          role="document"
+        >
+          <div class="modal-content">
+            <div
+              class="modal-body"
+              style="height: 50vh; display: grid; place-items: center"
+            >
+              <div class="text-center">
+                <h1 class="h3 fw-bold">Your overall income will be</h1>
+                <div class="render__tax h4"></div>
+                <div class="h5">after tax deduction</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn form__fieldset--btn mx-auto"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional: Place to the bottom of scripts -->
+      <script>
+        const myModal = new bootstrap.Modal(
+          document.getElementById("modalId"),
+          options
+        );
+      </script>
+    </main>
+  </body>
+</html>
