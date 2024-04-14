@@ -49,21 +49,6 @@ This project follows an object-oriented programming (OOP) paradigm to achieve it
 - Error icons are not visible in the form by default.
 - Bootstrap is used for styling and interactivity.
 
-## File Structure
-
-.
-├── css
-│ ├── bootstrap.min.css
-│ └── style.css
-├── images
-│ ├── alert.png
-│ └── question.png
-├── js
-│ ├── bootstrap.bundle.min.js
-│ └── script.js
-├── index.html
-└── README.md
-
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
