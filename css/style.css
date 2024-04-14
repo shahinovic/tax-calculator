@@ -8,6 +8,24 @@ main {
   border: 2px solid #c7d2dc;
 }
 
+@media (max-width: 992px) {
+  .form {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .form {
+    padding-inline: 20px !important;
+  }
+}
+
 .form__fieldset--label__tooltip {
   margin: 0 !important;
   padding: 0 !important;
